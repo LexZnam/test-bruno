@@ -12,7 +12,7 @@ public class Main {
         System.out.println("изм 2");
         System.out.println("rep1");
         System.out.println("rep2");
-
+        System.out.println("new_branch_1");
 
     }
 }
