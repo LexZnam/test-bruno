@@ -1,6 +1,6 @@
-package module_3;
+package com.Brunoyam.module_3;
 
-public class mod3_hard2 {
+public class Mod3Hard2 {
     public static void main(String[] args) {
         //координаты вершин условные--
         double ax = 3;

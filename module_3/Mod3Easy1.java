@@ -1,6 +1,8 @@
-package module_3;
+package com.Brunoyam.module_3;
+
 import java.util.Scanner;
-public class mod3_easy1 {
+
+public class Mod3Easy1 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         int a = scanner.nextInt();
@@ -10,6 +12,6 @@ public class mod3_easy1 {
         a = b;
         b = c;
 
-            System.out.println("Пользователь ввел значение для a: " +  a + " и b: " + b);
+        System.out.println("Пользователь ввел значение для a: " + a + " и b: " + b);
     }
 }
