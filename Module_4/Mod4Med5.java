@@ -8,6 +8,8 @@ public class Mod4Med5 {
 
         Scanner scan = new Scanner(System.in);
 
+        System.out.println("определить если у корни у квадратного уравнения по формуле D = b^2 - 4ac. Введите значения a, b, c");
+
         int a = scan.nextInt();
         int b = scan.nextInt();
         int c = scan.nextInt();

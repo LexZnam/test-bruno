@@ -6,17 +6,19 @@ public class Mod4Med1 {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
 
+        System.out.println("Определить, какое из трёх введённых пользователем значений наименьшее, наибольшее, среднее");
+
         int a = scan.nextInt();
         int b = scan.nextInt();
         int c = scan.nextInt();
 
         //Найти максимальное и минимальное число
-        int Max = Math.max(a, Math.max(b, c));
-        int Min = Math.min(a, Math.min(b, c));
+        int max = Math.max(a, Math.max(b, c));
+        int min = Math.min(a, Math.min(b, c));
 
         //Определить является ли число a и b максимальным, либо минимальным
-        boolean aMid = a == Min | a == Max;
-        boolean bMid = b == Min | b == Max;
+        boolean aMid = a == min | a == max;
+        boolean bMid = b == min | b == max;
         int mid;
 
         //Найти какое из трех чисел является средним
@@ -28,8 +30,8 @@ public class Mod4Med1 {
             mid = c;
         }
 
-        System.out.println("min:" + Min);
-        System.out.println("max:" + Max);
+        System.out.println("min:" + min);
+        System.out.println("max:" + max);
         System.out.println("mid:" + mid);
 
     }

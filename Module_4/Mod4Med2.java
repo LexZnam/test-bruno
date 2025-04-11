@@ -7,6 +7,8 @@ public class Mod4Med2 {
 
         Scanner scan = new Scanner(System.in);
 
+        System.out.println("Определить, кратно ли первое число второму. Введите два числа");
+
         int a = scan.nextInt();
         int b = scan.nextInt();
 
