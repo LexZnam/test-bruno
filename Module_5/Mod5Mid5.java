@@ -13,29 +13,29 @@ import java.util.Scanner;
 public class Mod5Mid5 {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
-        int n;
-
-        do {
-            System.out.println("Задайте размер массива");
-            n = scan.nextInt();
-        } while (n < 0 | n > 10);
-
         int summa = 0;
 
-        System.out.println("Задайте значение элементов массива");
 
-        int[][] mas = new int[n][n];
+        System.out.println("Задайте размер массива");
+        int n = scan.nextInt();
 
-        for (int i = 0; i < n; i++) {
-            for (int b = 0; b < n; b++) {
-                mas[b][i] = scan.nextInt();
-                if (i == b) {
-                    summa = mas[b][i] + summa;
+        if (n > 0 & n < 11) {
+
+            System.out.println("Задайте значение элементов массива");
+
+            int[][] mas = new int[n][n];
+
+            for (int i = 0; i < n; i++) {
+                for (int b = 0; b < n; b++) {
+                    mas[b][i] = scan.nextInt();
+                    if (i == b) {
+                        summa = mas[b][i] + summa;
+                    }
                 }
             }
+            System.out.println("Ответ: " + summa);
+        } else {
+            System.out.println("Число не от 1 до 10");
         }
-
-        System.out.println("Ответ: " + summa);
-
     }
 }

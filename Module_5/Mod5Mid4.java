@@ -11,14 +11,18 @@ public class Mod5Mid4 {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
         System.out.println("Введите натуральное число");
-
         int n = scan.nextInt();
-        int summa = 1;
+        if (n > 0) {
 
-        for (int i = 1; i <= n; i++) {
-            summa = summa * i;
+            int factorial = 1;
+
+            for (int i = 1; i <= n; i++) {
+                factorial = factorial * i;
+            }
+            System.out.println(factorial);
+        } else {
+            System.out.println("Введите положительное число");
         }
-        System.out.println(summa);
     }
 }
 

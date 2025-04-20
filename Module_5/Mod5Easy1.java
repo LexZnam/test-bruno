@@ -12,10 +12,15 @@ public class Mod5Easy1 {
         Scanner scanner = new Scanner(System.in);
         int a = scanner.nextInt();
         int n = scanner.nextInt();
+        int summa = 1;
 
-        while (a > 0 && n > 0) {
-            System.out.println(Math.pow(a, n));
-            break;
+        if (a > 0 && n > 0) {
+            for (int i = 1; i <= n; i++) {
+                summa = summa * a;
+            }
+            System.out.println(summa);
+
         }
+
     }
 }
