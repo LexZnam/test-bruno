@@ -19,7 +19,10 @@ public class Mod5Mid5 {
         System.out.println("Задайте размер массива");
         int n = scan.nextInt();
 
-        if (n > 0 & n < 11) {
+        if (n < 0 | n > 10) {
+            System.out.println("Число не от 1 до 10");
+            return;
+        }
 
             System.out.println("Задайте значение элементов массива");
 
@@ -34,8 +37,6 @@ public class Mod5Mid5 {
                 }
             }
             System.out.println("Ответ: " + summa);
-        } else {
-            System.out.println("Число не от 1 до 10");
-        }
+
     }
 }
