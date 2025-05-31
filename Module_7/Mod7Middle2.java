@@ -4,43 +4,57 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class Mod7Middle2 {
-    Scanner scanner = new Scanner(System.in);
+
 
     public static void main(String[] args) {
 
-        new Mod7Middle2();
+        RockPaperScissors game = new RockPaperScissors();
+        game.startGame();
+
     }
 
-    Mod7Middle2() {
-        int ai = aiChoose();
-        int player = playerChoose();
-        rules(ai, player);
+
+}
+
+class RockPaperScissors {
+    Scanner scanner = new Scanner(System.in);
+    int ai;
+    int player;
+
+    public void startGame() {//играем до победы
+        playerChoose();
+        aiChoose();
+        if (rules(ai, player)==false) {
+            startGame();
+        }
     }
 
-    // реализация ходов--
-    int playerChoose() {
+    void playerChoose() {//Игрок выбирает карту от 0 до 2
         System.out.println("0-камень, 1-ножницы, 2-бумага");
         int num = scanner.nextInt();
         if (num < 0 | num > 2) {
             playerChoose();
         }
-        return num;
+        player = num;
     }
 
-    int aiChoose() {
+    void aiChoose() {//АИ рандомно выбирает карту
         int num = new Random().nextInt(3);
-        return num;
+        ai = num;
     }
     // --реализация ходов
 
-    void rules(int ai, int player) {
+    boolean rules(int ai, int player) {//расчет победы
         if (ai == player) {
-            System.out.println("Ничья");
+            System.out.println("Ничья. AI тоже выбрал " + ai);
+            return false;
         } else if (ai == 0 && player == 1 || ai == 1 && player == 2 || ai == 2 && player == 0) {
-            System.out.println("AI выиграл");
+            System.out.println("AI выиграл, у него: " + ai);
+            return true;
         } else {
-            System.out.println("Игрок выиграл");
+            System.out.println("Игрок выиграл, у AI было: " + ai);
+            return true;
         }
     }
-}
 
+}

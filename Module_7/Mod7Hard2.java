@@ -11,7 +11,7 @@ public class Mod7Hard2 {
 
         String[] card = {"0-Камень", "1-ножницы", "2-бумага", "3-колодец"};
 
-        do {//начало игры
+        while (true){//начало игры
             System.out.println("ваш ход");
             int nAI = ai.makeAINum();//карта AI
             int nPl = players.makePlayerNum();//карта игрока
@@ -41,7 +41,7 @@ public class Mod7Hard2 {
                 }
                 return;
             }
-        } while (true);
+        }
     }
 }
 
