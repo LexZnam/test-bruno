@@ -17,7 +17,7 @@ class Game {
     int hideNumber;
     int number;
     int gameMod;
-    int normalMode = 3;
+    int NORMALMODE = 3;
 
     void hideNum() {//загадать АИ число
         hideNumber = new Random().nextInt(10) + 1;
@@ -29,7 +29,7 @@ class Game {
     }
 
     void getGameMod() {//Выбрать режим игры
-        System.out.println("Вы хотите играть в обычном режиме ?(" + normalMode + " попытки) тогда нажмите: 1. Безлимитный режим - нажмите: 2 ");
+        System.out.println("Вы хотите играть в обычном режиме ?(" + NORMALMODE + " попытки) тогда нажмите: 1. Безлимитный режим - нажмите: 2 ");
         gameMod = scanner.nextInt();
         if (gameMod != 1 & gameMod != 2) {
             getGameMod();
@@ -39,7 +39,7 @@ class Game {
     public void gameStart() {
         getGameMod();
         hideNum();
-        for (int i = 0; i < normalMode; i++) {//запускаем игру до трех побед
+        for (int i = 0; i < NORMALMODE; i++) {//запускаем игру до трех побед
             getNumber();
             if (checkWin() == true) {
                 System.out.println("Вы выиграли. Было загадано: " + hideNumber);
@@ -55,10 +55,8 @@ class Game {
     boolean checkWin() {//Проверить победу
         if (hideNumber > number) {
             System.out.println("больше");
-            return false;
         } else if (hideNumber < number) {
             System.out.println("меньше");
-            return false;
         } else if (hideNumber == number) {
             System.out.println("угадал!");
             return true;

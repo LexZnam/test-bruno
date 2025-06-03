@@ -20,7 +20,7 @@ public class Mod7Middle3 {
 class Frog {
     private int totalJumpСount;
     int rollOfDice = 0;
-    int finish = 30;
+    int FINISH = 30;
 
     public Frog(String name) {
         this.name = name;
@@ -39,7 +39,7 @@ class Frog {
     }
 
     public void startJump() {//броски кости пока прыжки не будут равны 30
-        while (totalJumpСount <= finish) {
+        while (totalJumpСount <= FINISH) {
             System.out.println(name + ":");
             getRandJump();
         }
