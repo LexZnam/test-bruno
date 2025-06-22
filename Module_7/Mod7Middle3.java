@@ -20,7 +20,7 @@ public class Mod7Middle3 {
 class Frog {
     private int totalJumpСount;
     int rollOfDice = 0;
-    int FINISH = 30;
+    private static final int FINISH = 30;
 
     public Frog(String name) {
         this.name = name;

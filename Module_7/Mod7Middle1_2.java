@@ -41,7 +41,7 @@ class Game {
         hideNum();
         for (int i = 0; i < NORMALMODE; i++) {//запускаем игру до трех побед
             getNumber();
-            if (checkWin() == true) {
+            if (checkWin()) {
                 System.out.println("Вы выиграли. Было загадано: " + hideNumber);
                 return;
             }

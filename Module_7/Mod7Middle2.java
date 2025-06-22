@@ -24,7 +24,7 @@ class RockPaperScissors {
     public void startGame() {//играем до победы
         playerChoose();
         aiChoose();
-        if (rules(ai, player) == false) {
+        if (rules(ai, player)) {
             startGame();
         }
     }
@@ -47,13 +47,13 @@ class RockPaperScissors {
     boolean rules(int ai, int player) {//расчет победы
         if (ai == player) {
             System.out.println("Ничья. AI тоже выбрал " + ai);
-            return false;
+            return true;
         } else if (ai == 0 && player == 1 || ai == 1 && player == 2 || ai == 2 && player == 0) {
             System.out.println("AI выиграл, у него: " + ai);
         } else {
             System.out.println("Игрок выиграл, у AI было: " + ai);
         }
-        return true;
+        return false;
     }
 
 }
