@@ -1,4 +1,4 @@
-package Mod8Hard1;
+package com.Brunoyam.Module_8.Mod8Hard1;
 
 public class PassengerCar extends Transport {
 

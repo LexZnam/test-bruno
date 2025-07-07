@@ -1,4 +1,4 @@
-package Mod8Hard1;
+package com.Brunoyam.Module_8.Mod8Hard1;
 
 public class TankerTruck extends Transport {
     public TankerTruck(String brand, int price) {

@@ -1,7 +1,9 @@
 package com.Brunoyam.Module_8.Mod8Mid3;
 
+import com.Brunoyam.Module_8.Mod8Mid3.Exercises.Exercises;
+
 public class Calculator {
-    int calorieConsumption(int kkInMin, int min) {
-        return kkInMin * min;
+    int calorieConsumption(Exercises exercises, int min) {
+        return exercises.getKkInMin() * min;
     }
 }
